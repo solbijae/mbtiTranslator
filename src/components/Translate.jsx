@@ -1,10 +1,29 @@
 import { useRef } from 'react';
+import { CallGPT } from '../apis/gpt';
 
-const Translate = () => {
+const Translate = ({mbti}) => {
     const textAreaRef = useRef();
+
+    const connectGPT = async (userInput) => {
+        const param = {
+            "mbti": mbti,
+            "content": userInput
+        }
+        try {
+            const message = await CallGPT(param);
+            console.log(JSON.parse(message))
+        } catch (err) {
+            // messageApi.open({
+            //     type: 'error',
+            //     content: 'API 요청 에러',
+            // });
+            // console.log(messageApi);
+        }
+    }
 
     const handleSubmit = () => {
         const userInput = textAreaRef.current.value;
+        connectGPT(userInput);
     }
 
     return (

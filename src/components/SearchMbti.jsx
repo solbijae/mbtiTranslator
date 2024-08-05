@@ -7,7 +7,7 @@ const validMbti = [
     'ESTJ', 'ESFJ', 'ENFJ', 'ENTJ'
 ];
 
-const SearchMbti = () => {
+const SearchMbti = ({setMbti}) => {
     const inputRef = useRef();
     const [feedback, setFeedback] = useState('');
     
@@ -15,7 +15,8 @@ const SearchMbti = () => {
         if (inputRef.current !== null) {
             const input = inputRef.current.value.trim().toUpperCase();
             if (validMbti.includes(input)) {
-                setFeedback(`${input}로 변할게요!`)
+                setFeedback(`${input}로 변할게요!`);
+                setMbti(input);
             } else {
                 setFeedback("올바른 MBTI를 입력해주세요!")
             }
