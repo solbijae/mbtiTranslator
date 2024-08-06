@@ -11,7 +11,7 @@ const Translate = ({mbti}) => {
         }
         try {
             const message = await CallGPT(param);
-            console.log(JSON.parse(message))
+            console.log(message)
         } catch (err) {
             // messageApi.open({
             //     type: 'error',
