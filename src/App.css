@@ -41,6 +41,7 @@ button {
     font-weight: 600;
     color: #1d3124;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .contentContainer {
