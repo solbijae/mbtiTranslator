@@ -29,6 +29,10 @@ h1 {
     font-size: 1rem;
 }
 
+.mbtiContainer p {
+    align-self: center;
+}
+
 button {
     padding: 8px 15px;
     background-color: #e59560;
