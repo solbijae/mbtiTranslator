@@ -26,7 +26,7 @@ const SearchMbti = ({setMbti}) => {
     }
 
     return (
-        <div className=''>
+        <div className='mbtiContainer'>
             <input type="text" placeholder="MBTI를 검색하세요!" id="searchMbti" ref={inputRef} />
             <button onClick={chkValidMbti}>선택</button>
             {feedback && <p>{feedback}</p>}

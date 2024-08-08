@@ -33,7 +33,7 @@ const Translate = ({mbti}) => {
     }
 
     return (
-        <div>
+        <div className='contentContainer'>
             <div>
                 <textarea name="searchContent" id="searchContent" cols={100} rows={50} placeholder='어떤 말을 번역해드릴까요?' ref={textAreaRef}></textarea>
             </div>

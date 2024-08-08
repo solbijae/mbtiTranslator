@@ -1,0 +1,61 @@
+.mainContainer {
+    padding: 60px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1d3124
+}
+
+.mbtiContainer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.mbtiContainer #searchMbti,
+.mbtiContainer #searchMbti:focus
+.mbtiContainer #searchMbti:active
+.mbtiContainer #searchMbti:-webkit-autofill {
+    text-align: center;
+    background-color: #f6f4e8;
+    border: #ccc;
+    outline: none;
+    box-shadow: 0 0 0px 1000px #f6f4e8 inset;
+    transition: #f6f4e8 5000s ease-in-out 0s;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #e59560;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #1d3124;
+    font-size: 1rem;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.contentContainer #searchContent,
+.contentContainer #searchContent:focus
+.contentContainer #searchContent:active
+.contentContainer #searchContent:-webkit-autofill {
+    background-color: #f6f4e8;
+    border: #ccc;
+    outline: none;
+    box-shadow: 0 0 0px 1000px #f6f4e8 inset;
+    transition: #f6f4e8 5000s ease-in-out 0s;
+    border-radius: 3px;
+    font-size: 1rem;
+}
