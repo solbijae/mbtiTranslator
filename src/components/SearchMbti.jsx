@@ -15,7 +15,7 @@ const SearchMbti = ({setMbti}) => {
         if (inputRef.current !== null) {
             const input = inputRef.current.value.trim().toUpperCase();
             if (validMbti.includes(input)) {
-                setFeedback(`${input}로 변할게요!`);
+                setFeedback(`${input}로 변할게! 얍!`);
                 setMbti(input);
             } else {
                 setFeedback("올바른 MBTI를 입력해주세요!")
