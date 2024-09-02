@@ -21,7 +21,7 @@ const Translate = ({mbti}) => {
             // input : 오늘 출근길에 넘어져서 다리 다쳐서 너무 아프고 발목도 삐고 팔목도 아프고 엉덩이고 아프고 다 쑤시고 너무 힘들어ㅜㅜㅜ 위로해줘ㅜㅜㅜ
             setTimeout(() => {
                 setLoading(false);
-            }, 1000);
+            }, 100000);
 
         } catch (err) {
             // messageApi.open({
