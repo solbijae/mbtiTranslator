@@ -58,6 +58,7 @@ button {
 .contentContainer #searchContent:active
 .contentContainer #searchContent:-webkit-autofill {
     width: 100%;
+    height: 60vh;
     background-color: #f7f9fc;
     border: #ccc;
     outline: none;
