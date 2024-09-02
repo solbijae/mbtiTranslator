@@ -11,33 +11,33 @@ export const CallGPT = async (param) => {
 
   const messages = [
     {
-      role: "system",
+      role: 'system',
       content: `너는 ${mbti}를 MBTI(Myers–Briggs Type Indicator)로 가진 사람이야. 다른 사람의 말을 보고, 너의 MBTI에 맞게 해석할거야. ${personalMsg}`,
     },
     {
-      role: "user",
+      role: 'user',
       content: `
-        """
+        '''
         ${content}
-        """`,
+        '''`,
     },
   ];
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${import.meta.env.VITE_GPT_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "gpt-3.5-turbo",
+      model: 'gpt-3.5-turbo',
       messages,
       temperature: 0.7,
       max_tokens: 1_000,
     }),
   });
   const responseData = await response.json();
-  console.log(">>responseData", responseData);
+  console.log('>>responseData', responseData);
 
   const message = responseData.choices[0].message.content;
 

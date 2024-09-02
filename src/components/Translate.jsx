@@ -7,8 +7,8 @@ const Translate = ({mbti}) => {
 
     const connectGPT = async (userInput) => {
         const param = {
-            "mbti": mbti,
-            "content": userInput
+            'mbti': mbti,
+            'content': userInput
         }
         try {
             setLoading(true);
@@ -21,7 +21,7 @@ const Translate = ({mbti}) => {
             // input : 오늘 출근길에 넘어져서 다리 다쳐서 너무 아프고 발목도 삐고 팔목도 아프고 엉덩이고 아프고 다 쑤시고 너무 힘들어ㅜㅜㅜ 위로해줘ㅜㅜㅜ
             setTimeout(() => {
                 setLoading(false);
-            }, 100000);
+            }, 1000);
 
         } catch (err) {
             // messageApi.open({
@@ -47,7 +47,7 @@ const Translate = ({mbti}) => {
                 </div>
             )}
             <div>
-                <textarea name="searchContent" id="searchContent" cols={100} rows={50} placeholder='어떤 말을 번역해드릴까요?' ref={textAreaRef}></textarea>
+                <textarea name='searchContent' id='searchContent' cols={100} rows={50} placeholder='어떤 말을 번역해드릴까요?' ref={textAreaRef}></textarea>
             </div>
             <button onClick={handleSubmit}>번역하기</button>
         </div>

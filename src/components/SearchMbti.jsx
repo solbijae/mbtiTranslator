@@ -18,7 +18,7 @@ const SearchMbti = ({setMbti}) => {
                 setFeedback(`${input}로 변할게! 얍!`);
                 setMbti(input);
             } else {
-                setFeedback("올바른 MBTI를 입력해주세요!")
+                setFeedback('올바른 MBTI를 입력해주세요!')
             }
         } else {
             setFeedback('MBTI를 입력해주세요!')
@@ -27,7 +27,7 @@ const SearchMbti = ({setMbti}) => {
 
     return (
         <div className='mbtiContainer'>
-            <input type="text" placeholder="MBTI를 검색하세요!" id="searchMbti" ref={inputRef} />
+            <input type='text' placeholder='MBTI를 검색하세요!' id='searchMbti' ref={inputRef} />
             <button onClick={chkValidMbti}>선택</button>
             {feedback && <p>{feedback}</p>}
         </div>

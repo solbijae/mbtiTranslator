@@ -8,7 +8,7 @@ function App() {
   const [mbti, setMbti] = useState('');
 
   return (
-    <div className="mainContainer">
+    <div className='mainContainer'>
       <Heading />
       <SearchMbti setMbti={setMbti} />
       <Translate mbti={mbti} />
