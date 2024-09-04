@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { CallGPT } from '../apis/gpt';
+import { CallGPT } from '../../apis/gpt';
 
 const Translate = ({mbti}) => {
     const textAreaRef = useRef();
