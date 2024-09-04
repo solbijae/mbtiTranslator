@@ -13,6 +13,6 @@ function App() {
       <Route path="/mbti/:type" element={<MbtiDetail />}></Route>
     </Routes>
   );
-}
+};
 
 export default App;

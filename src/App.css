@@ -2,7 +2,12 @@
     padding: 60px;
 }
 
-h1 {
+.homeIconContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
     text-align: center;
     margin-bottom: 25px;
     color: var(--color-white)
