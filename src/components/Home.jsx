@@ -12,7 +12,7 @@ function Home() {
       <SearchMbti setMbti={setMbti} />
       <Translate mbti={mbti} />
     </div>
-  )
+  );
 }
 
 export default Home;
