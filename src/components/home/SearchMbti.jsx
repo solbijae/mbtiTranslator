@@ -1,11 +1,5 @@
 import { useRef, useState } from 'react';
-
-const validMbti = [
-    'ISTJ', 'ISFJ', 'INFJ', 'INTJ',
-    'ISTP', 'ISFP', 'INFP', 'INTP',
-    'ESTP', 'ESFP', 'ENFP', 'ENTP',
-    'ESTJ', 'ESFJ', 'ENFJ', 'ENTJ'
-];
+import { validMbti } from '../../constants/Mbti'
 
 const SearchMbti = ({setMbti}) => {
     const inputRef = useRef();
