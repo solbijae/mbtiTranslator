@@ -1,19 +1,18 @@
-import { useState } from 'react';
 import './App.css';
-import Heading from './components/Heading';
-import SearchMbti from './components/SearchMbti';
-import Translate from './components/Translate';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './components/Home';
+import Description from './components/Description';
+import MbtiDetail from './components/description/MbtiDetail';
 
 function App() {
-  const [mbti, setMbti] = useState('');
-
   return (
-    <div className='mainContainer'>
-      <Heading />
-      <SearchMbti setMbti={setMbti} />
-      <Translate mbti={mbti} />
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/mbti" element={<Description />}></Route>
+      <Route path="/mbti/:type" element={<MbtiDetail />}></Route>
+    </Routes>
+  );
 }
 
 export default App;

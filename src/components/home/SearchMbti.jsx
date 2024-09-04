@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { validMbti } from '../../constants/Mbti'
+import { validMbti } from '../../constants/Mbti';
 
 const SearchMbti = ({setMbti}) => {
     const inputRef = useRef();
@@ -8,7 +8,7 @@ const SearchMbti = ({setMbti}) => {
     const chkValidMbti = () => {
         if (inputRef.current !== null) {
             const input = inputRef.current.value.trim().toUpperCase();
-            if (validMbti.includes(input)) {
+            if (Object.keys(validMbti).includes(input)) {
                 setFeedback(`${input}로 변할게! 얍!`);
                 setMbti(input);
             } else {
