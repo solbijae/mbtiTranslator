@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ArrowBack from '../icons/ArrowBack';
-import Info from '../icons/Info';
+import ArrowBackIcon from '../icons/ArrowBackIcon';
+import InfoIcon from '../icons/InfoIcon';
 import Heading from './Heading';
 import SearchMbti from './home/SearchMbti'
 import Translate from './home/Translate';
@@ -25,11 +25,11 @@ function Home() {
   return (
     <div className='mainContainer'>
       <div className='homeIconContainer'>
-        <ArrowBack 
+        <ArrowBackIcon 
           style={{visibility: complete ? 'visible' : 'hidden', cursor: 'pointer'}} 
           onClick={handleArrowBackClick}
         />
-        <Info
+        <InfoIcon
           style={{cursor: 'pointer'}} 
           onClick={handleInfoClick}
         />

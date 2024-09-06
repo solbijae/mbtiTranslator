@@ -1,18 +1,17 @@
 import { useNavigate, Link } from 'react-router-dom';
 import { validMbti } from '../constants/Mbti';
-import ArrowBack from '../icons/ArrowBack';
+import ArrowBackIcon from '../icons/ArrowBackIcon';
 import Heading from './Heading';
 
 function Description() {
   const navigate = useNavigate();
-
   const handleArrowBackClick = () => {
     navigate('/');
-  }
+  };
 
   return (
     <div className='mainContainer'>
-      <ArrowBack 
+      <ArrowBackIcon 
         style={{cursor: 'pointer'}} 
         onClick={handleArrowBackClick}
       />
@@ -26,6 +25,6 @@ function Description() {
       </ul>
     </div>
   );
-}
+};
 
 export default Description;

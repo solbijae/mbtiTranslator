@@ -1,6 +1,6 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import { validMbti } from '../../constants/Mbti';
-import ArrowBack from '../../icons/ArrowBack';
+import ArrowBackIcon from '../../icons/ArrowBackIcon';
 import Heading from '../Heading';
 
 const MbtiDetail = () => {
@@ -12,9 +12,13 @@ const MbtiDetail = () => {
     navigate('/mbti');
   }
 
+  if (!validMbti[type]) {
+    return <Navigate to='/error' />;
+  }
+  
   return(
     <div className='mainContainer'>
-      <ArrowBack 
+      <ArrowBackIcon 
         style={{cursor: 'pointer'}} 
         onClick={handleArrowBackClick}
       />

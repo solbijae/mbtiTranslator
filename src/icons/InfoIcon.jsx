@@ -1,4 +1,4 @@
-const Info = (props) => (
+const InfoIcon = (props) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg"
     height={props.height || "24px"}
@@ -10,4 +10,4 @@ const Info = (props) => (
   </svg>
 );
 
-export default Info;
+export default InfoIcon;
