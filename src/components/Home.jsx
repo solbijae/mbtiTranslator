@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ArrowBack from '../icons/arrowBack';
+import ArrowBack from '../icons/ArrowBack';
 import Info from '../icons/Info';
 import Heading from './Heading';
 import SearchMbti from './home/SearchMbti'

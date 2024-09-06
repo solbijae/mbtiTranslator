@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { validMbti } from '../../constants/Mbti';
-import ArrowBack from '../../icons/arrowBack';
+import ArrowBack from '../../icons/ArrowBack';
 import Heading from '../Heading';
 
 const MbtiDetail = () => {
