@@ -124,3 +124,21 @@ button {
 .mbtiDetail {
   color: var(--color-white);
 }
+
+.errorMessage {
+  text-align: center;
+  margin: 80px 0;
+  line-height: 1.6;
+  color: var(--color-white);
+}
+
+.toHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  line-height: 1;
+  color: var(--color-white);
+  font-weight: bold;
+}
