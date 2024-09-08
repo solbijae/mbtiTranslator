@@ -12,7 +12,7 @@ function App() {
       <Route path='/' element={<Home />}></Route>
       <Route path='/mbti' element={<Description />}></Route>
       <Route path='/mbti/:type' element={<MbtiDetail />}></Route>
-      < Route path='/*' element={<Error />}></Route>
+      <Route path='/*' element={<Error />}></Route>
     </Routes>
   );
 };
