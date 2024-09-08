@@ -1,10 +1,9 @@
 import { useRef, useState } from 'react';
-import { CallGPT } from '../apis/gpt';
+import { CallGPT } from '../../apis/gpt';
 
-const Translate = ({mbti}) => {
+const Translate = ({ mbti, setComplete, result, setResult }) => {
     const textAreaRef = useRef();
     const [loading, setLoading] = useState(false);
-    const [result, setResult] = useState('');
 
     const connectGPT = async (userInput) => {
         const param = {
@@ -21,6 +20,7 @@ const Translate = ({mbti}) => {
             setTimeout(() => {
                 setResult(message)
                 setLoading(false);
+                setComplete(true);
             }, 1000);
 
         } catch (err) {
