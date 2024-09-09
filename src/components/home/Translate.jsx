@@ -91,9 +91,16 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
         <div 
           css={css({
             position: 'absolute',
-            width: '50%',
+            width: '90%',
             height: '100%',
             backgroundColor: 'var(--color-cream)',
+            transition: 'width 0.3s ease-in-out',
+            '@media (min-width: 769px) and (max-width: 1024px)': {
+              width: '80%', // 화면이 769px 이상 1024px 이하일 때 width를 80%로 설정
+            },
+            '@media (min-width: 1025px)': {
+              width: '70%', // 화면이 1025px 이상일 때 width를 70%로 설정
+            },
           })}
         >
           <p 
@@ -107,8 +114,15 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
       )}
       <div 
         css={css({
-          width: '50%',
+          width: '90%',
           height: '100%',
+          transition: 'width 0.3s ease-in-out',
+          '@media (min-width: 769px) and (max-width: 1024px)': {
+            width: '80%', // 화면이 769px 이상 1024px 이하일 때 width를 80%로 설정
+          },
+          '@media (min-width: 1025px)': {
+            width: '70%', // 화면이 1025px 이상일 때 width를 70%로 설정
+          },
         })}
       >
         <textarea 
