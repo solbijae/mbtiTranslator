@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { useNavigate, Link } from 'react-router-dom';
 import { validMbti } from '../constants/Mbti';
 import ArrowBackIcon from '../icons/ArrowBackIcon';
@@ -10,7 +12,11 @@ function Description() {
   };
 
   return (
-    <div className='mainContainer'>
+    <div 
+      css={css({
+        padding: '60px',
+      })}
+    >
       <ArrowBackIcon 
         style={{cursor: 'pointer'}} 
         onClick={handleArrowBackClick}

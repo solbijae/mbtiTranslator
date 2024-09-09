@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '../icons/ArrowBackIcon';
@@ -23,14 +25,25 @@ function Home() {
   };
 
   return (
-    <div className='mainContainer'>
-      <div className='homeIconContainer'>
+    <div css={css({
+      padding: '60px',
+    })}>
+      <div css={css({
+          display: 'flex',
+          justifyContent: 'space-between',
+        })}
+      >
         <ArrowBackIcon 
-          style={{visibility: complete ? 'visible' : 'hidden', cursor: 'pointer'}} 
+          css={css({
+            visibility: complete ? 'visible' : 'hidden',
+            cursor: 'pointer'
+          })}
           onClick={handleArrowBackClick}
         />
         <InfoIcon
-          style={{cursor: 'pointer'}} 
+          css={css({
+            cursor: 'pointer'
+          })}
           onClick={handleInfoClick}
         />
       </div>

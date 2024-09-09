@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import { validMbti } from '../../constants/Mbti';
 import ArrowBackIcon from '../../icons/ArrowBackIcon';
@@ -17,14 +19,27 @@ const MbtiDetail = () => {
   }
   
   return(
-    <div className='mainContainer'>
+    <div 
+      css={css({
+        padding: '60px',
+      })}
+    >
       <ArrowBackIcon 
         style={{cursor: 'pointer'}} 
         onClick={handleArrowBackClick}
       />
       <Heading />
-      <h2 className='mbtiType'>{type}</h2>
-      <p className='mbtiDetail'>{description}</p>
+      <h2 
+        css={css({
+          color: 'var(--color-white)',
+          marginBottom: '10px',
+        })}
+      >{type}</h2>
+      <p 
+        css={css({
+          color: 'var(--color-white)',
+        })}
+      >{description}</p>
     </div>
   );
 }
