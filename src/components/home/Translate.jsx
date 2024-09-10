@@ -2,6 +2,7 @@
 import { css, keyframes } from "@emotion/react";
 import { useRef, useState } from 'react';
 import { CallGPT } from '../../apis/gpt';
+import { BaseButton } from "../common/BaseButton";
 
 const Translate = ({ mbti, setComplete, result, setResult }) => {
   const textAreaRef = useRef();
@@ -138,19 +139,9 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
           ref={textAreaRef}>
         </textarea>
       </div>
-      <button
-        css={css({
-          padding: '8px 15px',
-          backgroundColor: 'var(--color-orange)',
-          border: 'none',
-          borderRadius: '3px',
-          fontWeight: '600',
-          color: '#25262b',
-          fontSize: '1rem',
-          cursor: 'pointer',
-        })} 
+      <BaseButton
         onClick={handleSubmit}
-      >번역하기</button>
+      >번역하기</BaseButton>
     </div>
   );
 };

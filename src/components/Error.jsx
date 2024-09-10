@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useNavigate } from 'react-router-dom';
+import { Container } from "./common/Container";
+import { Heading } from "../components/common/Heading"
 import HomeIcon from '../icons/HomeIcon';
 
 const Error = () => {
@@ -10,18 +12,8 @@ const Error = () => {
   };
 
   return (
-    <div 
-      css={css({
-        padding: '60px',
-      })}
-    >
-      <h1 
-        css={css({
-          textAlign: 'center',
-          marginBottom: '25px',
-          color: 'var(--color-white)',
-        })}
-      >NOT FOUND</h1>
+    <Container>
+      <Heading>NOT FOUND</Heading>
       <div 
         css={css({
           textAlign: 'center',
@@ -50,7 +42,7 @@ const Error = () => {
         <HomeIcon />
         <span>메인으로 가기</span>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -2,9 +2,10 @@
 import { css } from "@emotion/react";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Container } from "./common/Container";
 import ArrowBackIcon from '../icons/ArrowBackIcon';
 import InfoIcon from '../icons/InfoIcon';
-import Heading from './Heading';
+import Header from "./common/Header";
 import SearchMbti from './home/SearchMbti'
 import Translate from './home/Translate';
 
@@ -25,9 +26,7 @@ function Home() {
   };
 
   return (
-    <div css={css({
-      padding: '60px',
-    })}>
+    <Container>
       <div css={css({
           display: 'flex',
           justifyContent: 'space-between',
@@ -47,7 +46,7 @@ function Home() {
           onClick={handleInfoClick}
         />
       </div>
-      <Heading />
+      <Header />
       <SearchMbti setMbti={setMbti} />
       <Translate 
         mbti={mbti} 
@@ -55,7 +54,7 @@ function Home() {
         result={result} 
         setResult={setResult} 
       />
-    </div>
+    </Container>
   );
 };
 

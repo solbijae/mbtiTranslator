@@ -2,6 +2,7 @@
 import { css } from "@emotion/react";
 import { useRef, useState } from 'react';
 import { validMbti } from '../../constants/Mbti';
+import { BaseButton } from "../common/BaseButton";
 
 const SearchMbti = ({setMbti}) => {
   const inputRef = useRef();
@@ -45,19 +46,7 @@ const SearchMbti = ({setMbti}) => {
         placeholder='MBTI를 검색하세요!' 
         ref={inputRef} 
       />
-      <button 
-        css={css({
-          padding: '8px 15px',
-          backgroundColor: 'var(--color-orange)',
-          border: 'none',
-          borderRadius: '3px',
-          fontWeight: '600',
-          color: 'var(--color-dark)',
-          fontSize: '1rem',
-          cursor: 'pointer',
-        })}
-        onClick={chkValidMbti}
-      >선택</button>
+      <BaseButton onClick={chkValidMbti}>선택</BaseButton>
       {feedback && 
         <p 
           css={css({

@@ -2,8 +2,9 @@
 import { css } from "@emotion/react";
 import { useNavigate, Link } from 'react-router-dom';
 import { validMbti } from '../constants/Mbti';
+import { Container } from "./common/Container";
 import ArrowBackIcon from '../icons/ArrowBackIcon';
-import Heading from './Heading';
+import Header from "./common/Header";
 
 function Description() {
   const navigate = useNavigate();
@@ -12,16 +13,12 @@ function Description() {
   };
 
   return (
-    <div 
-      css={css({
-        padding: '60px',
-      })}
-    >
+    <Container>
       <ArrowBackIcon 
         style={{cursor: 'pointer'}} 
         onClick={handleArrowBackClick}
       />
-      <Heading />
+      <Header />
       <ul>
         {Object.keys(validMbti).map(type => (
           <li key={type}>
@@ -29,7 +26,7 @@ function Description() {
           </li>
         ))}
       </ul>
-    </div>
+    </Container>
   );
 };
 

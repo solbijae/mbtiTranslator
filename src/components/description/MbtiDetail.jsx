@@ -2,8 +2,9 @@
 import { css } from "@emotion/react";
 import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import { validMbti } from '../../constants/Mbti';
+import { Container } from "../common/Container";
 import ArrowBackIcon from '../../icons/ArrowBackIcon';
-import Heading from '../Heading';
+import Header from "../common/Header";
 
 const MbtiDetail = () => {
   const { type } = useParams();
@@ -19,16 +20,12 @@ const MbtiDetail = () => {
   }
   
   return(
-    <div 
-      css={css({
-        padding: '60px',
-      })}
-    >
+    <Container>
       <ArrowBackIcon 
         style={{cursor: 'pointer'}} 
         onClick={handleArrowBackClick}
       />
-      <Heading />
+      <Header />
       <h2 
         css={css({
           color: 'var(--color-white)',
@@ -40,7 +37,7 @@ const MbtiDetail = () => {
           color: 'var(--color-white)',
         })}
       >{description}</p>
-    </div>
+    </Container>
   );
 }
 
