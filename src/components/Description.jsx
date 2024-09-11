@@ -18,8 +18,8 @@ function Description() {
       <Heading />
       <ul>
         {Object.keys(validMbti).map(type => (
-          <li key={type}>
-              <Link to={`/mbti/${type}`}>{type}</Link>
+          <li key={type.toLowerCase()}>
+              <Link to={`/mbti/${type.toLowerCase()}`}>{type}</Link>
           </li>
         ))}
       </ul>
