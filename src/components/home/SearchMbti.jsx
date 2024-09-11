@@ -8,7 +8,7 @@ const SearchMbti = ({setMbti}) => {
   const inputRef = useRef();
   const [feedback, setFeedback] = useState('');
   
-  const chkValidMbti = () => {
+  const handleValidMbti = () => {
     if (inputRef.current !== null) {
       const input = inputRef.current.value.trim().toUpperCase();
       if (Object.keys(validMbti).includes(input)) {
@@ -46,7 +46,7 @@ const SearchMbti = ({setMbti}) => {
         placeholder='MBTI를 검색하세요!' 
         ref={inputRef} 
       />
-      <BaseButton onClick={chkValidMbti}>선택</BaseButton>
+      <BaseButton onClick={handleValidMbti}>선택</BaseButton>
       {feedback && 
         <p 
           css={css({
