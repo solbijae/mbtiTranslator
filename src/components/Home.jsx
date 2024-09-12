@@ -27,22 +27,23 @@ function Home() {
 
   return (
     <Container>
-      <div css={css({
-          display: 'flex',
-          justifyContent: 'space-between',
-        })}
+      <div 
+        css={css`
+          display: flex;
+          justify-content: space-between;
+        `}
       >
         <ArrowBackIcon 
-          css={css({
-            visibility: complete ? 'visible' : 'hidden',
-            cursor: 'pointer'
-          })}
+          css={css`
+            visibility: ${complete ? 'visible' : 'hidden'};
+            cursor: pointer;
+          `}
           onClick={handleArrowBackClick}
         />
         <InfoIcon
-          css={css({
-            cursor: 'pointer'
-          })}
+          css={css`
+            cursor: pointer;
+          `}
           onClick={handleInfoClick}
         />
       </div>

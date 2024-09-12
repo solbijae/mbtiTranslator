@@ -24,24 +24,24 @@ const SearchMbti = ({setMbti}) => {
 
   return (
     <div 
-      css={css({
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '5px',
-        marginBottom: '15px',
-      })}
+      css={css`
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 15px;
+      `}
     >
       <input 
-        css={css({
-          textAlign: 'center',
-          backgroundColor: 'var(--color-cream)',
-          border: 'var(--color-gray)',
-          outline: 'none',
-          boxShadow: '0 0 0px 1000px var(--color-cream) inset',
-          transition: 'var(--color-cream) 5000s ease-in-out 0s',
-          borderRadius: '3px',
-          fontSize: '1rem',
-        })}
+        css={theme => css`
+          text-align: center;
+          background-color: ${theme.colors.cream};
+          border: ${theme.colors.gray};
+          outline: none;
+          box-shadow: 0 0 0px 1000px ${theme.colors.cream} inset;
+          transition: ${theme.colors.cream} 5000s ease-in-out 0s;
+          border-radius: 3px;
+          font-size: 1rem;
+        `}
         type='text' 
         placeholder='MBTI를 검색하세요!' 
         ref={inputRef} 
@@ -49,10 +49,10 @@ const SearchMbti = ({setMbti}) => {
       <BaseButton onClick={handleValidMbti}>선택</BaseButton>
       {feedback && 
         <p 
-          css={css({
-            alignSelf: 'center',
-            color: 'var(--color-white)',
-          })}
+          css={theme => css`
+            align-self: center;
+            color: ${theme.colors.white};
+          `}
         >{feedback}</p>
       }
     </div>

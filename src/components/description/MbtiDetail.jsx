@@ -27,15 +27,15 @@ const MbtiDetail = () => {
       />
       <Header />
       <h2 
-        css={css({
-          color: 'var(--color-white)',
-          marginBottom: '10px',
-        })}
+        css={theme => css`
+          color: ${theme.colors.white};
+          margin-bottom: 10px;
+        `}
       >{type}</h2>
       <p 
-        css={css({
-          color: 'var(--color-white)',
-        })}
+        css={theme => css`
+        color: ${theme.colors.white};
+        `}
       >{description}</p>
     </Container>
   );
