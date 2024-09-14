@@ -7,7 +7,7 @@ import { BaseButton } from "../common/BaseButton";
 const SearchMbti = ({setMbti}) => {
   const inputRef = useRef();
   const [feedback, setFeedback] = useState('');
-  
+
   const handleValidMbti = () => {
     if (inputRef.current !== null) {
       const input = inputRef.current.value.trim().toUpperCase();
@@ -58,6 +58,6 @@ const SearchMbti = ({setMbti}) => {
     </div>
   )
 
-};
+  };
 
-export default SearchMbti;
+  export default SearchMbti;
