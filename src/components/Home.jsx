@@ -1,8 +1,11 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Container } from "./common/Container";
 import ArrowBackIcon from '../icons/ArrowBackIcon';
 import InfoIcon from '../icons/InfoIcon';
-import Heading from './Heading';
+import Header from "./common/Header";
 import SearchMbti from './home/SearchMbti'
 import Translate from './home/Translate';
 
@@ -23,18 +26,28 @@ function Home() {
   };
 
   return (
-    <div className='mainContainer'>
-      <div className='homeIconContainer'>
+    <Container>
+      <div 
+        css={css`
+          display: flex;
+          justify-content: space-between;
+        `}
+      >
         <ArrowBackIcon 
-          style={{visibility: complete ? 'visible' : 'hidden', cursor: 'pointer'}} 
+          css={css`
+            visibility: ${complete ? 'visible' : 'hidden'};
+            cursor: pointer;
+          `}
           onClick={handleArrowBackClick}
         />
         <InfoIcon
-          style={{cursor: 'pointer'}} 
+          css={css`
+            cursor: pointer;
+          `}
           onClick={handleInfoClick}
         />
       </div>
-      <Heading />
+      <Header />
       <SearchMbti setMbti={setMbti} />
       <Translate 
         mbti={mbti} 
@@ -42,7 +55,7 @@ function Home() {
         result={result} 
         setResult={setResult} 
       />
-    </div>
+    </Container>
   );
 };
 

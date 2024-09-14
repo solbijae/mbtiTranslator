@@ -1,32 +1,63 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { useRef, useState } from 'react';
 import { validMbti } from '../../constants/Mbti';
+import { BaseButton } from "../common/BaseButton";
 
 const SearchMbti = ({setMbti}) => {
-    const inputRef = useRef();
-    const [feedback, setFeedback] = useState('');
-    
-    const handleValidMbti = () => {
-        if (inputRef.current !== null) {
-            const input = inputRef.current.value.trim().toUpperCase();
-            if (Object.keys(validMbti).includes(input)) {
-                setFeedback(`${input}로 변할게! 얍!`);
-                setMbti(input);
-            } else {
-                setFeedback('올바른 MBTI를 입력해주세요!')
-            }
-        } else {
-            setFeedback('MBTI를 입력해주세요!')
-        }
+  const inputRef = useRef();
+  const [feedback, setFeedback] = useState('');
+
+  const handleValidMbti = () => {
+    if (inputRef.current !== null) {
+      const input = inputRef.current.value.trim().toUpperCase();
+      if (Object.keys(validMbti).includes(input)) {
+        setFeedback(`${input}로 변할게! 얍!`);
+        setMbti(input);
+      } else {
+        setFeedback('올바른 MBTI를 입력해주세요!');
+      }
+    } else {
+      setFeedback('MBTI를 입력해주세요!');
     }
+  }
 
-    return (
-        <div className='mbtiContainer'>
-            <input type='text' placeholder='MBTI를 검색하세요!' id='searchMbti' ref={inputRef} />
-            <button onClick={handleValidMbti}>선택</button>
-            {feedback && <p>{feedback}</p>}
-        </div>
-    )
+  return (
+    <div 
+      css={css`
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 15px;
+      `}
+    >
+      <input 
+        css={theme => css`
+          text-align: center;
+          background-color: ${theme.colors.cream};
+          border: ${theme.colors.gray};
+          outline: none;
+          box-shadow: 0 0 0px 1000px ${theme.colors.cream} inset;
+          transition: ${theme.colors.cream} 5000s ease-in-out 0s;
+          border-radius: 3px;
+          font-size: 1rem;
+        `}
+        type='text' 
+        placeholder='MBTI를 검색하세요!' 
+        ref={inputRef} 
+      />
+      <BaseButton onClick={handleValidMbti}>선택</BaseButton>
+      {feedback && 
+        <p 
+          css={theme => css`
+            align-self: center;
+            color: ${theme.colors.white};
+          `}
+        >{feedback}</p>
+      }
+    </div>
+  )
 
-};
+  };
 
-export default SearchMbti;
+  export default SearchMbti;
