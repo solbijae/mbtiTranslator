@@ -13,27 +13,30 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
       'mbti': mbti,
       'content': userInput
     }
+    
     try {
       setLoading(true);
+      // input : 오늘 출근길에 넘어져서 다리 다쳐서 너무 아프고 발목도 삐고 팔목도 아프고 엉덩이고 아프고 다 쑤시고 너무 힘들어ㅜㅜㅜ 위로해줘ㅜㅜㅜ
       // const message = await CallGPT(param);
       const message = `
         다리 다쳐서 통증과 불편함을 겪음. 발목, 팔목, 엉덩이 등 다양한 부위에서 통증을 느낌. 현재 상태가 힘들고 위로가 필요함
       `
-      // input : 오늘 출근길에 넘어져서 다리 다쳐서 너무 아프고 발목도 삐고 팔목도 아프고 엉덩이고 아프고 다 쑤시고 너무 힘들어ㅜㅜㅜ 위로해줘ㅜㅜㅜ
-      setTimeout(() => {
-        setResult(message)
+      new Promise((resolve) => {
+        resolve(message);
+      })
+      .then((msg) => {
+        setResult(msg);
         setLoading(false);
         setComplete(true);
-      }, 1000);
-
+      });
     } catch (err) {
       // messageApi.open({
       //     type: 'error',
       //     content: 'API 요청 에러',
       // });
-      // console.log(messageApi);
+      alert('번역에 실패했습니다. 잠시후 다시 시도해주세요!')
     } finally {
-      // setLoading(false);
+      setLoading(false);
     }
   }
 
