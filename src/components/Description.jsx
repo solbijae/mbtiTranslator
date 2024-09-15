@@ -28,6 +28,6 @@ function Description() {
       </ul>
     </Container>
   );
-};
+}
 
 export default Description;
