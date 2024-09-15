@@ -17,14 +17,14 @@ const MbtiDetail = () => {
   }
   
   return(
-    <div className='mainContainer'>
+    <div className='p-60'>
       <ArrowBackIcon 
         style={{cursor: 'pointer'}} 
         onClick={handleArrowBackClick}
       />
       <Heading />
-      <h2 className='mbtiType'>{type}</h2>
-      <p className='mbtiDetail'>{description}</p>
+      <h2 className='text-white mb-10'>{type}</h2>
+      <p className='text-white'>{description}</p>
     </div>
   );
 }

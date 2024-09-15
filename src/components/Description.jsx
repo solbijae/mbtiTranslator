@@ -10,7 +10,7 @@ function Description() {
   };
 
   return (
-    <div className='mainContainer'>
+    <div className='p-60'>
       <ArrowBackIcon 
         style={{cursor: 'pointer'}} 
         onClick={handleArrowBackClick}
@@ -18,7 +18,7 @@ function Description() {
       <Heading />
       <ul>
         {Object.keys(validMbti).map(type => (
-          <li key={type.toLowerCase()}>
+          <li className='text-white' key={type.toLowerCase()}>
               <Link to={`/mbti/${type.toLowerCase()}`}>{type}</Link>
           </li>
         ))}

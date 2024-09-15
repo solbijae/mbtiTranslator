@@ -23,8 +23,8 @@ function Home() {
   };
 
   return (
-    <div className='mainContainer'>
-      <div className='homeIconContainer'>
+    <div className='p-60'>
+      <div className='flex justify-between'>
         <ArrowBackIcon 
           style={{visibility: complete ? 'visible' : 'hidden', cursor: 'pointer'}} 
           onClick={handleArrowBackClick}
