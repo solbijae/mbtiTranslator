@@ -5,7 +5,7 @@ import { CallGPT } from '../../apis/gpt';
 import { BaseButton } from "../common/BaseButton";
 
 const Translate = ({ mbti, setComplete, result, setResult }) => {
-  const textAreaRef = useRef();
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [loading, setLoading] = useState(false);
 
   const connectGPT = async (userInput) => {
@@ -41,7 +41,7 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
   }
 
   const handleSubmit = () => {
-    const userInput = textAreaRef.current.value;
+    const userInput = textAreaRef.current?.value ?? '';
     connectGPT(userInput);
   }
 

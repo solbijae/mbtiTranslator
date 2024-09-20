@@ -5,7 +5,7 @@ import { validMbti } from '../../constants/Mbti';
 import { BaseButton } from "../common/BaseButton";
 
 const SearchMbti = ({setMbti}) => {
-  const inputRef = useRef();
+  const inputRef = useRef<HTMLInputElement>(null);
   const [feedback, setFeedback] = useState('');
 
   const handleValidMbti = () => {
