@@ -83,7 +83,7 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
             css={theme => css`
               width: 40px;
               height: 40px;
-              border: 5px solid ${theme.colors.blue};
+              border: 5px solid ${theme.color.blue};
               border-top: 5px solid transparent;
               border-radius: 50%;
               animation: ${rotate} 1s linear infinite;
@@ -97,7 +97,7 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
             position: absolute;
             width: 90%;
             height: 100%;
-            background-color: ${theme.colors.cream};
+            background-color: ${theme.color.cream};
             transition: width 0.3s ease-in-out;
             
             @media (min-width: 769px) and (max-width: 1024px) {

@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { useNavigate, Link } from 'react-router-dom';
 import { validMbti } from '../constants/Mbti';
 import { Container } from "./common/Container";

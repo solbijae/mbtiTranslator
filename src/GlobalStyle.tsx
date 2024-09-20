@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 
 export const GlobalStyle = (theme) => css`
@@ -11,7 +12,7 @@ export const GlobalStyle = (theme) => css`
   html, body {
     height: 100%;
     width: 100%;
-    background-color: ${theme.colors.dark};
+    background-color: ${theme.color.dark};
   }
 
   ol, ul {
@@ -20,6 +21,6 @@ export const GlobalStyle = (theme) => css`
 
   a {
     text-decoration: none;
-    color: ${theme.colors.white};
+    color: ${theme.color.white};
   }
 `;

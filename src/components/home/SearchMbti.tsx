@@ -34,11 +34,11 @@ const SearchMbti = ({setMbti}) => {
       <input 
         css={theme => css`
           text-align: center;
-          background-color: ${theme.colors.cream};
-          border: ${theme.colors.gray};
+          background-color: ${theme.color.cream};
+          border: ${theme.color.gray};
           outline: none;
-          box-shadow: 0 0 0px 1000px ${theme.colors.cream} inset;
-          transition: ${theme.colors.cream} 5000s ease-in-out 0s;
+          box-shadow: 0 0 0px 1000px ${theme.color.cream} inset;
+          transition: ${theme.color.cream} 5000s ease-in-out 0s;
           border-radius: 3px;
           font-size: 1rem;
         `}
@@ -51,7 +51,7 @@ const SearchMbti = ({setMbti}) => {
         <p 
           css={theme => css`
             align-self: center;
-            color: ${theme.colors.white};
+            color: ${theme.color.white};
           `}
         >{feedback}</p>
       }
