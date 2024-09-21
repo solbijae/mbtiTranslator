@@ -4,11 +4,16 @@ import { useRef, useState } from 'react';
 import { CallGPT } from '../../apis/gpt';
 import { BaseButton } from "../common/BaseButton";
 
-const Translate = ({ mbti, setComplete, result, setResult }) => {
+const Translate = ({ mbti, setComplete, result, setResult }: {
+  mbti: string;
+  setComplete: (value: boolean) => void;
+  result: string;
+  setResult: (value: string) => void;
+}) => {
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [loading, setLoading] = useState(false);
 
-  const connectGPT = async (userInput) => {
+  const connectGPT = async (userInput: string) => {
     const param = {
       'mbti': mbti,
       'content': userInput
@@ -21,7 +26,7 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
       const message = `
         다리 다쳐서 통증과 불편함을 겪음. 발목, 팔목, 엉덩이 등 다양한 부위에서 통증을 느낌. 현재 상태가 힘들고 위로가 필요함
       `
-      new Promise((resolve) => {
+      new Promise<string>((resolve) => {
         resolve(message);
       })
       .then((msg) => {

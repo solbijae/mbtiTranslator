@@ -9,13 +9,13 @@ import Header from "../common/Header";
 const MbtiDetail = () => {
   const { type } = useParams();
   const navigate = useNavigate();
-  const description = validMbti[type.toUpperCase()];
+  const description = validMbti[type?.toUpperCase() as keyof typeof validMbti];
 
   const handleArrowBackClick = () => {
     navigate('/mbti');
   }
 
-  if (!validMbti[type.toUpperCase()]) {
+  if (!validMbti[type?.toUpperCase() as keyof typeof validMbti]) {
     return <Navigate to='/error' />;
   }
   
