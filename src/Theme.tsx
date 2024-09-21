@@ -10,11 +10,11 @@ const colors = {
 
 export type ColorsTypes = typeof colors;
 
-export interface Theme {
+export interface ThemeProps {
   color: ColorsTypes;
 }
 
-const theme: Theme = {
+const theme: ThemeProps = {
   color: colors,
 };
 

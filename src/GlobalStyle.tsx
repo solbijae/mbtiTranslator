@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Theme } from './Theme';
+import { ThemeProps } from './Theme';
 
-export const GlobalStyle = (theme: Theme) => css`
+export const GlobalStyle = (theme: ThemeProps) => css`
   * {
     margin: 0;
     padding: 0;
