@@ -4,7 +4,7 @@ import { useRef, useState } from 'react';
 import { validMbti } from '../../constants/Mbti';
 import { BaseButton } from "../common/BaseButton";
 
-const SearchMbti = ({setMbti}) => {
+const SearchMbti = ({setMbti}: {setMbti: (mbti: string) => void}) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [feedback, setFeedback] = useState('');
 
