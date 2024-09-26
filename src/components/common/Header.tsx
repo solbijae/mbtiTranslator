@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { Heading } from "./Heading";
 
 const Header = () => {

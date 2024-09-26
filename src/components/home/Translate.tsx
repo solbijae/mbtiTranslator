@@ -4,41 +4,49 @@ import { useRef, useState } from 'react';
 import { CallGPT } from '../../apis/gpt';
 import { BaseButton } from "../common/BaseButton";
 
-const Translate = ({ mbti, setComplete, result, setResult }) => {
-  const textAreaRef = useRef();
+const Translate = ({ mbti, setComplete, result, setResult }: {
+  mbti: string;
+  setComplete: (value: boolean) => void;
+  result: string;
+  setResult: (value: string) => void;
+}) => {
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [loading, setLoading] = useState(false);
 
-  const connectGPT = async (userInput) => {
+  const connectGPT = async (userInput: string) => {
     const param = {
       'mbti': mbti,
       'content': userInput
     }
+    
     try {
       setLoading(true);
+      // input : 오늘 출근길에 넘어져서 다리 다쳐서 너무 아프고 발목도 삐고 팔목도 아프고 엉덩이고 아프고 다 쑤시고 너무 힘들어ㅜㅜㅜ 위로해줘ㅜㅜㅜ
       // const message = await CallGPT(param);
       const message = `
         다리 다쳐서 통증과 불편함을 겪음. 발목, 팔목, 엉덩이 등 다양한 부위에서 통증을 느낌. 현재 상태가 힘들고 위로가 필요함
       `
-      // input : 오늘 출근길에 넘어져서 다리 다쳐서 너무 아프고 발목도 삐고 팔목도 아프고 엉덩이고 아프고 다 쑤시고 너무 힘들어ㅜㅜㅜ 위로해줘ㅜㅜㅜ
-      setTimeout(() => {
-        setResult(message)
+      new Promise<string>((resolve) => {
+        resolve(message);
+      })
+      .then((msg) => {
+        setResult(msg);
         setLoading(false);
         setComplete(true);
-      }, 1000);
-
+      });
     } catch (err) {
       // messageApi.open({
       //     type: 'error',
       //     content: 'API 요청 에러',
       // });
-      // console.log(messageApi);
+      alert('번역에 실패했습니다. 잠시후 다시 시도해주세요!')
     } finally {
-      // setLoading(false);
+      setLoading(false);
     }
   }
 
   const handleSubmit = () => {
-    const userInput = textAreaRef.current.value;
+    const userInput = textAreaRef.current?.value ?? '';
     connectGPT(userInput);
   }
 
@@ -80,7 +88,7 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
             css={theme => css`
               width: 40px;
               height: 40px;
-              border: 5px solid ${theme.colors.blue};
+              border: 5px solid ${theme.color.blue};
               border-top: 5px solid transparent;
               border-radius: 50%;
               animation: ${rotate} 1s linear infinite;
@@ -94,7 +102,7 @@ const Translate = ({ mbti, setComplete, result, setResult }) => {
             position: absolute;
             width: 90%;
             height: 100%;
-            background-color: ${theme.colors.cream};
+            background-color: ${theme.color.cream};
             transition: width 0.3s ease-in-out;
             
             @media (min-width: 769px) and (max-width: 1024px) {
