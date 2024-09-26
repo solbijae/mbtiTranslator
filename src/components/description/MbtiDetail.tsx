@@ -7,15 +7,16 @@ import ArrowBackIcon from '../../icons/ArrowBackIcon';
 import Header from "../common/Header";
 
 const MbtiDetail = () => {
-  const { type } = useParams();
   const navigate = useNavigate();
-  const description = validMbti[type.toUpperCase()];
+  const { type } = useParams<{ type?: string }>();
+  const mbtiType = type?.toUpperCase() as keyof typeof validMbti;
+  const description = validMbti[type?.toUpperCase() as keyof typeof validMbti];
 
   const handleArrowBackClick = () => {
     navigate('/mbti');
   }
 
-  if (!validMbti[type.toUpperCase()]) {
+  if (!mbtiType || !(mbtiType in validMbti)) {
     return <Navigate to='/error' />;
   }
   
@@ -28,13 +29,13 @@ const MbtiDetail = () => {
       <Header />
       <h2 
         css={theme => css`
-          color: ${theme.colors.white};
+          color: ${theme.color.white};
           margin-bottom: 10px;
         `}
       >{type}</h2>
       <p 
         css={theme => css`
-        color: ${theme.colors.white};
+          color: ${theme.color.white};
         `}
       >{description}</p>
     </Container>

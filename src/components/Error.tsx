@@ -19,7 +19,7 @@ const Error = () => {
           text-align: center;
           margin: 80px 0;
           line-height: 1.6;
-          color: ${theme.colors.white};
+          color: ${theme.color.white};
         `}
       >
         <p>죄송합니다, 페이지를 찾을 수 없습니다.</p>
@@ -34,7 +34,7 @@ const Error = () => {
           gap: 5px;
           cursor: pointer;
           line-height: 1;
-          color: ${theme.colors.white};
+          color: ${theme.color.white};
           font-weight: bold;
         `}
         onClick={handleToHome}
