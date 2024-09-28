@@ -1,4 +1,5 @@
-export const validMbti: { [key: string]: string } = {
+export type validMbtiType = 'ISTJ' | 'ISFJ' | 'INFJ' | 'INTJ' | 'ISTP' | 'ISFP' | 'INFP' | 'INTP' | 'ESTP' | 'ESFP' | 'ENFP' | 'ENTP' | 'ESTJ' | 'ESFJ' | 'ENFJ' | 'ENTJ';
+export const validMbti: Record<validMbtiType, string> = {
   ISTJ: '체계적이고 책임감이 강하며, 전통과 규칙을 중시합니다. 실용적인 접근을 통해 효율적으로 문제를 해결합니다.',
   ISFJ: '헌신적이고 세심하며, 다른 사람들을 돌보는 데 뛰어납니다. 충성스럽고 신뢰할 수 있는 친구나 동료입니다.',
   INFJ: '통찰력과 직관력이 뛰어나며, 깊은 감정과 도덕적 신념을 지닌 이상주의자입니다. 다른 사람을 돕고자 하는 강한 열망이 있습니다.',
@@ -15,4 +16,4 @@ export const validMbti: { [key: string]: string } = {
   ESFJ: '사람들과의 조화로운 관계를 중요시하며, 친절하고 배려가 깊습니다. 사회적이고 공동체를 중시하는 성향이 있습니다.',
   ENFJ: '이상적이고 영감을 주며, 다른 사람의 잠재력을 끌어내는 데 능합니다. 관계를 중시하고 사회적 조화를 추구합니다.',
   ENTJ: '자신감이 넘치고 전략적이며, 목표를 달성하기 위해 강력한 리더십을 발휘합니다. 복잡한 문제를 해결하는 데 능숙합니다.'
-} as const;
+};

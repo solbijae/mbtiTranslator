@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useParams, useNavigate, Navigate } from 'react-router-dom';
-import { validMbti } from '../shared/Mbti';
+import { validMbti, validMbtiType } from '../shared/Mbti';
+import { useMbtiValues } from '../shared/hooks/useMbtiValues';
 import { Container } from '../widgets/Container';
 import ArrowBackIcon from '../widgets/icons/ArrowBackIcon';
 import Header from '../widgets/Header';
@@ -9,9 +10,9 @@ import Header from '../widgets/Header';
 const MbtiDetail = () => {
   const navigate = useNavigate();
   const { type } = useParams<{ type?: string }>();
-  const mbtiType = type?.toUpperCase() as keyof typeof validMbti;
-  const description = validMbti[type?.toUpperCase() as keyof typeof validMbti];
-
+  const mbtiType = type?.toUpperCase() as validMbtiType;
+  const description = useMbtiValues({ type: mbtiType });
+  
   const handleArrowBackClick = () => {
     navigate('/mbti');
   }

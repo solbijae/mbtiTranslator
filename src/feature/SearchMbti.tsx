@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useRef, useState } from 'react';
-import { validMbti } from '../shared/Mbti';
+import { useMbtiKeys } from '../shared/hooks/useMbtiKeys';
 import { BaseButton } from '../widgets/BaseButton';
 
 const SearchMbti = ({setMbti}: {setMbti: (mbti: string) => void}) => {
@@ -11,7 +11,7 @@ const SearchMbti = ({setMbti}: {setMbti: (mbti: string) => void}) => {
   const handleValidMbti = () => {
     if (inputRef.current !== null) {
       const input = inputRef.current.value.trim().toUpperCase();
-      if (Object.keys(validMbti).includes(input)) {
+      if (useMbtiKeys().includes(input)) {
         setFeedback(`${input}로 변할게! 얍!`);
         setMbti(input);
       } else {
