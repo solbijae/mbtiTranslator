@@ -1,11 +1,11 @@
 import { ThemeProvider, Global } from '@emotion/react';
 import { Routes, Route } from 'react-router-dom';
-import theme from './Theme';
-import { GlobalStyle } from './GlobalStyle';
-import Home from './components/Home';
-import Description from './components/Description';
-import MbtiDetail from './components/description/MbtiDetail';
-import Error from './components/Error';
+import theme from '../shared/theme/Theme';
+import { GlobalStyle } from '../shared/styles/GlobalStyle';
+import Home from '../pages/HomePage';
+import Description from '../pages/DescriptionPage';
+import MbtiDetail from '../pages/MbtiDetailPage';
+import Error from '../pages/ErrorPage';
 
 function App() {
   return (

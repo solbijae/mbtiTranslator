@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useRef, useState } from 'react';
-import { validMbti } from '../../constants/Mbti';
-import { BaseButton } from "../common/BaseButton";
+import { validMbti } from '../shared/Mbti';
+import { BaseButton } from '../widgets/BaseButton';
 
 const SearchMbti = ({setMbti}: {setMbti: (mbti: string) => void}) => {
   const inputRef = useRef<HTMLInputElement>(null);

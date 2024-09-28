@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useParams, useNavigate, Navigate } from 'react-router-dom';
-import { validMbti } from '../../constants/Mbti';
-import { Container } from "../common/Container";
-import ArrowBackIcon from '../../icons/ArrowBackIcon';
-import Header from "../common/Header";
+import { validMbti } from '../shared/Mbti';
+import { Container } from '../widgets/Container';
+import ArrowBackIcon from '../widgets/icons/ArrowBackIcon';
+import Header from '../widgets/Header';
 
 const MbtiDetail = () => {
   const navigate = useNavigate();

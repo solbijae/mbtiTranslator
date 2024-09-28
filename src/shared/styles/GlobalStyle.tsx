@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { ThemeProps } from './Theme';
+import { ThemeProps } from '../theme/Theme';
 
 export const GlobalStyle = (theme: ThemeProps) => css`
   * {

@@ -2,12 +2,12 @@
 import { css } from "@emotion/react";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container } from "./common/Container";
-import ArrowBackIcon from '../icons/ArrowBackIcon';
-import InfoIcon from '../icons/InfoIcon';
-import Header from "./common/Header";
-import SearchMbti from './home/SearchMbti'
-import Translate from './home/Translate';
+import { Container } from '../widgets/Container';
+import ArrowBackIcon from '../widgets/icons/ArrowBackIcon';
+import InfoIcon from '../widgets/icons/InfoIcon';
+import Header from '../widgets/Header';
+import SearchMbti from '../feature/SearchMbti';
+import Translate from '../feature/Translate/Translate';
 
 function Home() {
   const navigate = useNavigate();

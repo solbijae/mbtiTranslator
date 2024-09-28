@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useNavigate } from 'react-router-dom';
-import { Container } from "./common/Container";
-import { Heading } from "../components/common/Heading"
-import HomeIcon from '../icons/HomeIcon';
+import { Container } from '../widgets/Container';
+import { Heading } from "../widgets/Heading"
+import HomeIcon from '../widgets/icons/HomeIcon';
 
 const Error = () => {
   const navigate = useNavigate();

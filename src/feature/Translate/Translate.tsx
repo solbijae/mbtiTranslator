@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
 import { useRef, useState } from 'react';
-import { CallGPT } from '../../apis/gpt';
-import { BaseButton } from "../common/BaseButton";
+import { CallGPT } from './Gpt.api';
+import { BaseButton } from '../../widgets/BaseButton';
 
 const Translate = ({ mbti, setComplete, result, setResult }: {
   mbti: string;
